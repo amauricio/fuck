@@ -1,1 +1,3 @@
 Start-Process calc.exe
+Write-Host "ola"
+Start-Process notepad.exe
