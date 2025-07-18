@@ -1,0 +1,11 @@
+# Ayudame a encontrar el password
+# Se perdió en algún lado del sistema, solo se que MalwareSpace tiene algo que ver.
+
+$key = ???????
+
+$enc = Get-Content "flag.enc"
+$secure = $enc | ConvertTo-SecureString -Key $key
+$flag = [Runtime.InteropServices.Marshal]::PtrToStringAuto(
+  [Runtime.InteropServices.Marshal]::SecureStringToBSTR($secure)
+)
+$flag
